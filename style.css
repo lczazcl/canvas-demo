@@ -2,27 +2,88 @@
 * @Author: Administrator
 * @Date:   2018-03-05 21:15:33
 * @Last Modified by:   Administrator
-* @Last Modified time: 2018-03-05 21:16:15
+* @Last Modified time: 2018-03-06 12:04:50
 */
-
-#xxx{
-	background: #999;
-}
 *{
     margin:0;
     padding:0;
 }
+ul,ol{
+	list-style: none;
+}
+.icon {
+   width: 1em; height: 1em;
+   vertical-align: -0.15em;
+   fill: currentColor;
+   overflow: hidden;
+}
+#xxx{
+	background: #999;
+}
 .actions{
 	position: fixed;
-	bottom:0;
+	top:0;
 	left:0;
+	padding:20px;
 }
-.actions > #brush{	/* 默认画笔按钮隐藏 */
-	display:none;
+.actions svg{
+	width:1.5em;
+	height:1.5em;
+	transition: all 0.3s;
+	margin:0 10px;
 }
-.actions.x > #brush{	/* 加上状态后画笔出现 */
-	display:inline-block;
+.actions svg:nth-child(2){
+	width:1.7em;
+	height:1.7em;
 }
-.actions.x > #eraser{	/* 同时隐藏橡皮擦 */
-	display:none;
+.actions svg.active{
+	color:red;
+	transform:scale(1.2);
+}
+
+/* 画笔颜色 */
+.colors{
+	position: fixed;
+	top:60px;
+	left:28px;
+}
+.colors > li{
+	width: 20px;
+	height:20px;
+	border-radius:10px;
+	margin:10px 0;
+	transition:all 0.3s;
+}
+.colors > li.black{
+	background:black;
+}
+.colors > li.red{
+	background:red;
+}
+.colors > li.blue{
+	background:blue;
+}
+.colors > li.active{
+	box-shadow: 0 0 10px rgba(0,0,0,0.95);
+	transform:scale(1.2);
+}
+
+/* 画笔粗细 */
+.sizes{
+	position: fixed;
+	right:20px;
+	top:10px;
+}
+.sizes > li{
+	margin:20px 0;
+}
+.sizes > .thin{
+	height:0;
+	width:20px;
+	border-top:3px solid #000;
+}
+.sizes > .thick{
+	height:0;
+	width:20px;
+	border-top:10px solid #000;
 }
