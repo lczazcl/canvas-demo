@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2018-03-05 21:15:33
 * @Last Modified by:   Administrator
-* @Last Modified time: 2018-03-06 12:04:50
+* @Last Modified time: 2018-03-06 15:50:45
 */
 *{
     margin:0;
@@ -18,7 +18,11 @@ ul,ol{
    overflow: hidden;
 }
 #xxx{
+	position: fixed;
+	display: block;
 	background: #999;
+	top:0;
+	left:0;
 }
 .actions{
 	position: fixed;
